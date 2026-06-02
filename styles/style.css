@@ -1,0 +1,396 @@
+:root {
+  --cor-principal: #0055FF;
+}
+:root {
+  --cor-secundaria: #ededed;
+}
+:root {
+  --principal-clara: #e0eafb;
+}
+:root {
+  --principal-escura: #002368;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/**********/
+/*NAV BAR*/
+/*********/
+ul {
+    list-style: none;
+}
+
+body {
+    background-color: var(--cor-secundaria);
+    font-family: 'Lato', sans-serif;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: var(--cor-secundaria);
+    box-shadow: 0px 0px 20px rgb(72, 71, 71);
+}
+
+.brand-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 70px;
+}
+
+.brand {
+    color: rgb(0, 0, 0);
+    letter-spacing: -3px;
+}
+
+.brand span {
+    color: var(--cor-principal);
+}
+
+.menu {
+    display: flex;
+}
+
+.menu li {
+    position: relative;
+}
+
+.menu li a {
+    padding: 25px;
+    color: black;
+    text-decoration: none;
+    font-size: 14px;
+    display: block;
+}
+
+.menu li a:hover {
+    color: var(--cor-secundaria);
+    background-color: var(--cor-principal);
+}
+
+
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 0 20px;
+}
+
+.profile-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.profile-info p {
+    margin: 0;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.xp-bar {
+    width: 100px;
+    height: 10px;
+    background-color: #cfcfcf;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-top: 5px;
+}
+
+.xp-fill {
+    width: 70%;
+    height: 100%;
+    background-color: var(--cor-principal);
+}
+
+.profile img {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/**********/
+/*HOME PAGE*/
+/*********/
+
+.home{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+    height: 100vh;
+    background: url('/images/cidade.jpg');
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.5);
+    background-blend-mode: darken;
+}
+
+.home h1{
+    font-size: 70px;
+    color: var(--cor-secundaria);
+    font-weight: 700;
+}
+
+.search-box{
+    margin:30px;
+    width: 500px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+
+    background: var(--cor-secundaria);
+    border-radius: 45px;
+
+    overflow: hidden;
+    border-color: #002368;
+    box-shadow: 0px 5px 15px black;
+}
+
+.search-box button{
+    width: 70px;
+    height:100%;
+
+    border: none;
+
+    background: var(--cor-principal);
+    color: var(--cor-secundaria);
+    cursor: pointer;
+}
+
+.search-box button:hover{
+    background: var(--principal-escura); 
+}
+
+.search-box input{
+    font-size: 15px;
+    flex: 1;
+    border: none;
+    outline: none;
+    height:100%;
+    padding: 0 20px;
+}
+
+.search{
+    height: 30px;
+}
+
+/**********/
+/* SELOS */
+/*********/
+
+.badges{
+    background-color: var(--principal-clara);
+    height: 100vh;
+}
+
+.badges .content{
+    padding: 50px;
+    margin: 0 auto;
+}
+
+.badges .badges-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+}
+
+.badges .badges-container .badge{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    background-color: var(--cor-secundaria);
+    border-radius: 10px;
+    box-shadow: 0 0 5px var(--principal-escura);
+}
+
+.badges .badges-container .badge:hover{
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px var(--principal-escura);
+    cursor: pointer;
+}
+
+.badges .badges-container .badge .progress-bar{
+    width: 100px;
+    height: 10px;
+    background-color: #cfcfcf;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-top: 5px;
+}
+
+.badges .badges-container .badge .progress-bar .xp-fill1{
+    background-color: var(--cor-principal);
+    width: 100%;
+    height: 100%
+}
+
+.badges .badges-container .badge .progress-bar .xp-fill2{
+    background-color: var(--cor-principal);
+    width: 50%;
+    height: 100%
+}
+
+.badges .badges-container .badge .progress-bar .xp-fill3{
+    background-color: var(--cor-principal);
+    width: 0%;
+    height: 100%
+}
+
+.badges .badges-container img{
+    height: 100px;
+}
+
+.badges .text h2{
+    font-size: 40px;
+}
+
+.badges .text p{
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/**********/
+/* REVIEWS */
+/*********/
+
+.reviews{
+    background-color: var(--cor-secundaria);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.reviews .review-block{
+    padding: 50px;
+    background-color: var(--principal-clara);
+    height: 70%;
+    width: 100%;
+    margin: 0 auto;
+    box-shadow: 0 0 8px var(--principal-escura);
+}
+
+.reviews .review-block h2{
+    font-size: 40px;
+}
+
+.reviews .review-block p{
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.reviews .review-block .comments{
+    display: flex;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.reviews .review-block .comments .comment{
+    padding: 20px;
+    width: 30%;
+    background-color: var(--cor-secundaria);
+    border-radius: 10px;
+    box-shadow: 0 0 5px var(--principal-escura);
+}
+
+.reviews .review-block .comments .comment img{
+    width: 110px;
+    padding: 10px 0;
+}
+
+/**********/
+/* LUGARES */
+/*********/
+
+.places{
+    padding: 50px;
+    background-color: var(--principal-clara);
+}
+
+.places .images{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    justify-items: center;
+}
+
+.places .images img{
+    width: 300px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 0 5px var(--principal-escura);
+}
+
+.places .images img:hover{
+    transition: all 0.3s ease;
+    width: 320px;
+    height: 270px;
+    margin: -20px;
+    box-shadow: 0 0 10px var(--principal-escura);
+    filter: brightness(90%);
+    cursor: pointer;
+}
+
+/**********/
+/* RANKING */
+/*********/
+
+.ranking{
+    background-color: var(--cor-secundaria);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.ranking img{
+    width: 60px;
+}
+
+.ranking .top-tier{
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.ranking .bottom-tier{
+    display: inline;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.ranking .bottom-tier h3{
+    font-size: 20px;
+}
+
+.ranking .bottom-tier h1{
+    font-size: 20px;
+}
+
+
+.ranking .bottom-tier .tier{
+    display: flex;
+    text-align: center;
+    padding: 10px 20px;
+    background-color: var(--cor-principal);
+    color: var(--cor-secundaria);
+    border-radius: 5px;
+    box-shadow: 0 0 5px var(--principal-escura);
+}
