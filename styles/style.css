@@ -27,6 +27,7 @@ ul {
 body {
     background-color: var(--cor-secundaria);
     font-family: 'Lato', sans-serif;
+    overflow-x: hidden;
 }
 
 .navbar {
@@ -366,31 +367,64 @@ body {
 .ranking .top-tier{
     display: flex;
     justify-content: center;
-    gap: 40px;
-    margin-top: 40px;
+    gap: 10px;
+    margin-top: 100px;
+}
+
+.ranking .top-tier .tier{
+    width: 15%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+    background-color: var(--principal-escura);
+    color: var(--cor-secundaria);
+    border-radius: 5px;
+    box-shadow: 0 0 5px var(--principal-escura);
+}
+
+.ranking .top-tier .tier img{
+    width: 80px;
 }
 
 .ranking .bottom-tier{
-    display: inline;
-    gap: 20px;
-    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 40px;
 }
 
 .ranking .bottom-tier h3{
     font-size: 20px;
 }
 
-.ranking .bottom-tier h1{
-    font-size: 20px;
+.ranking .bottom-tier p{
+    font-size: 16px;
 }
 
-
 .ranking .bottom-tier .tier{
+    height: 15%;
+    width: 80%;
     display: flex;
-    text-align: center;
+    gap: 10px;
+    align-items: center;
     padding: 10px 20px;
-    background-color: var(--cor-principal);
-    color: var(--cor-secundaria);
+    background-color: var(--principal-clara);
+    border-radius: 5px;
+    box-shadow: 0 0 5px var(--principal-escura);
+}
+
+.ranking .your-position{
+    margin-top: 5px;
+    height: 10%;
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: var(--principal-clara);
     border-radius: 5px;
     box-shadow: 0 0 5px var(--principal-escura);
 }
