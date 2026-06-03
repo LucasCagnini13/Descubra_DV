@@ -38,7 +38,7 @@ body {
     align-items: center;
     width: 100%;
     background-color: var(--cor-secundaria);
-    box-shadow: 0px 0px 20px rgb(72, 71, 71);
+    box-shadow: 0px 0px 2px rgb(72, 71, 71);
 }
 
 .brand-container {
@@ -47,16 +47,16 @@ body {
 }
 
 .logo {
-    width: 70px;
+    width: 10%;
 }
 
 .brand {
     color: rgb(0, 0, 0);
-    letter-spacing: -3px;
 }
 
 .brand span {
     color: var(--cor-principal);
+    letter-spacing: -8%;
 }
 
 .menu {
@@ -427,4 +427,174 @@ body {
     background-color: var(--principal-clara);
     border-radius: 5px;
     box-shadow: 0 0 5px var(--principal-escura);
+}
+
+/**********************/
+/* RESPONSIVIDADE */
+/**********************/
+
+@media (max-width: 1032px){
+
+    .menu{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .badges .badges-container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .reviews .review-block .comments{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .reviews .review-block .comments .comment{
+        width: 45%;
+    }
+
+    .places .images{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .ranking .top-tier{
+        flex-wrap: wrap;
+    }
+
+    .ranking .top-tier .tier{
+        width: 30%;
+    }
+}
+
+/**********/
+/* CELULAR */
+/**********/
+
+@media (max-width: 768px){
+
+    /**********/
+    /* NAVBAR */
+    /**********/
+
+    .navbar{
+        flex-direction: column;
+        padding: 10px 0;
+    }
+
+    .brand-container{
+        justify-content: center;
+    }
+
+    .menu{
+        justify-content: center;
+    }
+
+    .menu li a{
+        padding: 15px;
+        font-size: 13px;
+    }
+
+    .profile{
+        margin-top: 10px;
+    }
+
+    /**********/
+    /* HOME */
+    /**********/
+
+    .home h1{
+        font-size: 40px;
+        text-align: center;
+        padding: 0 20px;
+    }
+
+    .search-box{
+        width: 90%;
+    }
+
+    /**********/
+    /* SELOS */
+    /**********/
+
+    .badges{
+        height: auto;
+        padding: 50px 0;
+    }
+
+    .badges .content{
+        padding: 20px;
+    }
+
+    .badges .badges-container{
+        grid-template-columns: 1fr;
+    }
+
+    /**********/
+    /* REVIEWS */
+    /**********/
+
+    .reviews{
+        height: auto;
+        padding: 50px 0;
+    }
+
+    .reviews .review-block{
+        width: 95%;
+        height: auto;
+        padding: 20px;
+    }
+
+    .reviews .review-block .comments{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .reviews .review-block .comments .comment{
+        width: 100%;
+    }
+
+    /**********/
+    /* LUGARES */
+    /**********/
+
+    .places .images{
+        grid-template-columns: 1fr;
+    }
+
+    .places .images img{
+        width: 100%;
+        max-width: 320px;
+    }
+
+    .places .images img:hover{
+        width: 100%;
+        margin: 0;
+    }
+
+    /**********/
+    /* RANKING */
+    /**********/
+
+    .ranking{
+        height: auto;
+        padding: 50px 0;
+    }
+
+    .ranking .top-tier{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .ranking .top-tier .tier{
+        width: 90%;
+    }
+
+    .ranking .bottom-tier .tier{
+        width: 95%;
+    }
+
+    .ranking .your-position{
+        width: 95%;
+        margin: 20px auto;
+    }
 }
