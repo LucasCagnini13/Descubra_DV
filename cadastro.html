@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DescubraDV - Cadastro</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+    <div class="container-cadastro">
+
+        <div class="bloco-azul">
+            <h1>DescubraDv</h1>
+           <h2>Faça seu cadastro!</h2>
+<p class="descricao">Acesse e descubra os selos que contam a história da nossa cidade!</p>
+
+<form action="salvar.html" method="get">
+    <div class="campo">
+        <label>Nome:</label>
+        <input name="Nome" type="text" placeholder="Digite seu nome:">
+    </div>
+    <div class="campo">
+        <label>Email:</label>
+        <input name="Email" type="email" placeholder="Digite seu email">
+    </div>
+    <div class="campo">
+        <label>Senha:</label>
+        <input name="Senha" type="password" placeholder="Digite sua senha:">
+    </div>
+    <div class="campo">
+        <label>Tipo:</label>
+        <select name="Tipo">
+            <option selected value="">Selecione seu tipo de cadastro</option>
+            <option value="1">Descobridor</option>
+            <option value="2">Comerciante</option>
+        </select>
+    </div>
+    <button type="submit">Cadastrar</button>
+</form>
+            <p class="ja-tem-conta">Já tem conta? <a href="login.html">Fazer login</a></p>
+        </div>
+        
+
+       <div class="container-logo">
+    <img src="logo.png" class="logo" alt="Logo">
+</div>
+
+    </div>
+
+</body>
+</html>
