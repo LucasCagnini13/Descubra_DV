@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="/styles/style.css">
+<link rel="stylesheet" href="/styles/style-admin.css">
+
+<title>Painel Administrativo - DescubraDV</title>
+```
+
+</head>
+
+<body>
+
+<header class="navbar">
+    <div class="brand-container">
+        <img src="images/logo.png" alt="logo" class="logo">
+
+    <h1 class="brand">
+        Descubra<span>DV</span>
+    </h1>
+</div>
+
+<nav>
+    <ul class="menu">
+        <li><a href="#">Dashboard</a></li>
+        <li><a href="#">Usuários</a></li>
+        <li><a href="#">Locais</a></li>
+        <li><a href="#">Selos</a></li>
+        <li><a href="#">Avaliações</a></li>
+        <li><a href="#">Sair</a></li>
+    </ul>
+</nav>
+
+</header>
+
+<section class="admin-panel">
+
+<div class="admin-header">
+    <h1>Painel Administrativo</h1>
+    <p>Gerencie usuários, locais, selos e avaliações.</p>
+</div>
+
+<div class="dashboard-cards">
+
+    <div class="card">
+        <h2>152</h2>
+        <p>Usuários cadastrados</p>
+    </div>
+
+    <div class="card">
+        <h2>6</h2>
+        <p>Pontos turísticos</p>
+    </div>
+
+    <div class="card">
+        <h2>47</h2>
+        <p>Avaliações</p>
+    </div>
+
+    <div class="card">
+        <h2>7</h2>
+        <p>Selos disponíveis</p>
+    </div>
+
+</div>
+
+<div class="admin-content">
+
+    <div class="admin-section">
+
+        <h2>Usuários</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Nível</th>
+                    <th>Status</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>João Silva</td>
+                    <td>7</td>
+                    <td>Ativo</td>
+                    <td>
+                        <button class="btn-edit">Editar</button>
+                        <button class="btn-delete">Excluir</button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Maria Carvalho</td>
+                    <td>5</td>
+                    <td>Ativo</td>
+                    <td>
+                        <button class="btn-edit">Editar</button>
+                        <button class="btn-delete">Excluir</button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Carlos Oliveira</td>
+                    <td>8</td>
+                    <td>Ativo</td>
+                    <td>
+                        <button class="btn-edit">Editar</button>
+                        <button class="btn-delete">Excluir</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+
+    <div class="admin-section">
+
+        <h2>Pontos Turísticos</h2>
+
+        <button class="btn-add">+ Adicionar Local</button>
+
+        <div class="places-list">
+
+            <div class="place-item">
+                <span>Praça da Amizade</span>
+                <div>
+                    <button class="btn-edit">Editar</button>
+                    <button class="btn-delete">Excluir</button>
+                </div>
+            </div>
+
+            <div class="place-item">
+                <span>Moinho Paladini</span>
+                <div>
+                    <button class="btn-edit">Editar</button>
+                    <button class="btn-delete">Excluir</button>
+                </div>
+            </div>
+
+            <div class="place-item">
+                <span>Lago Dourado</span>
+                <div>
+                    <button class="btn-edit">Editar</button>
+                    <button class="btn-delete">Excluir</button>
+                </div>
+            </div>
+
+            <div class="place-item">
+                <span>Gruta Nossa Senhora</span>
+                <div>
+                    <button class="btn-edit">Editar</button>
+                    <button class="btn-delete">Excluir</button>
+                </div>
+            </div>
+
+            <div class="place-item">
+                <span>Caminho de Santiago</span>
+                <div>
+                    <button class="btn-edit">Editar</button>
+                    <button class="btn-delete">Excluir</button>
+                </div>
+            </div>
+
+            <div class="place-item">
+                <span>Cachoeira do Moinho</span>
+                <div>
+                    <button class="btn-edit">Editar</button>
+                    <button class="btn-delete">Excluir</button>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="admin-section">
+
+        <h2>Selos Disponíveis</h2>
+
+        <div class="places-list">
+
+            <div class="place-item">
+                <span>Chegar ao Caminho de Santiago</span>
+                <button class="btn-edit">Editar</button>
+            </div>
+
+            <div class="place-item">
+                <span>Finalizar o Caminho de Santiago</span>
+                <button class="btn-edit">Editar</button>
+            </div>
+
+            <div class="place-item">
+                <span>Visitar a Gruta</span>
+                <button class="btn-edit">Editar</button>
+            </div>
+
+            <div class="place-item">
+                <span>Visitar o Lago Dourado</span>
+                <button class="btn-edit">Editar</button>
+            </div>
+
+            <div class="place-item">
+                <span>Visitar o Moinho Paladini</span>
+                <button class="btn-edit">Editar</button>
+            </div>
+
+            <div class="place-item">
+                <span>Visitar a Cachoeira do Moinho</span>
+                <button class="btn-edit">Editar</button>
+            </div>
+
+            <div class="place-item">
+                <span>Visitar a Praça da Amizade</span>
+                <button class="btn-edit">Editar</button>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="admin-section">
+
+        <h2>Avaliações Recentes</h2>
+
+        <div class="review-admin">
+            <h4>João Silva</h4>
+            <p>Excelente experiência no Lago Dourado.</p>
+
+            <button class="btn-delete">
+                Remover Avaliação
+            </button>
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+</body>
+</html>

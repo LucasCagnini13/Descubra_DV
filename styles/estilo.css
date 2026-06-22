@@ -1,0 +1,276 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    font-family: 'Lato', sans-serif;
+    background: #f0f4ff;
+}
+
+.container-cadastro {
+    width: 100%;
+    max-width: 900px;
+    display: flex;
+    align-items: stretch;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, .15);
+    overflow: hidden;
+}
+
+.bloco-azul {
+    flex: 1;
+    background: hsl(240, 17%, 98%);
+    color: #fff;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.bloco-azul h1 {
+    display: inline-block;
+    color: #0055FF;
+    border: 3px solid #0055FF;
+    border-radius: 12px;
+    padding: 12px 30px;
+    margin: 0 auto 25px auto;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.bloco-azul h2 {
+    color: #111827;
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.bloco-azul .descricao {
+    color: #6B7280;
+    font-size: 14px;
+    line-height: 1.5;
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.bloco-azul .ja-tem-conta {
+    text-align: center;
+    font-size: 14px;
+    color: #374151;
+    margin-top: 18px;
+}
+
+.bloco-azul .ja-tem-conta a {
+    color: #0055FF;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.bloco-azul .ja-tem-conta a:hover {
+    text-decoration: underline;
+}
+
+.bloco-azul form {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    width: 100%;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    gap: 4px;
+}
+
+.bloco-azul label {
+    margin-bottom: 0;
+    font-weight: 600;
+    display: block;
+    color: #111827;
+    font-size: 14px;
+}
+
+.bloco-azul input,
+.bloco-azul select {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+    font-size: 15px;
+    font-family: inherit;
+    background: #fff;
+    color: #333;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.08);
+    transition: border-color 0.2s, box-shadow 0.2s;
+    outline: none;
+}
+
+.bloco-azul input::placeholder {
+    color: #9ca3af;
+}
+
+.bloco-azul input:focus,
+.bloco-azul select:focus {
+    border-color: #0055FF;
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.3);
+    background: #fff;
+}
+
+.bloco-azul button {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 12px;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: .3s;
+    margin-top: 14px;
+    color: white;
+    background-color: #0055FF;
+    border: 2px solid #1c3ba9;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+.bloco-azul button:hover {
+    background: #e6ecff;
+    color: #0055FF;
+}
+
+.bloco-azul button:active {
+    transform: scale(0.98);
+}
+
+.container-logo {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    background: #0055FF;
+}
+
+.logo {
+    display: block;
+    width: 220px;
+    max-width: 100%;
+    height: auto;
+}
+
+
+@media (max-width: 768px) {
+    body {
+        padding: 20px;
+    }
+
+    .container-cadastro {
+        flex-direction: column;
+        max-width: 100%;
+    }
+
+    .bloco-azul h1 {
+        font-size: 1.7rem;
+    }
+
+    .container-logo {
+        padding: 20px;
+    }
+
+    .logo {
+        width: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    .container-cadastro {
+        border-radius: 15px;
+    }
+
+    .bloco-azul {
+        padding: 20px;
+    }
+
+    .bloco-azul h1 {
+        font-size: 1.4rem;
+        padding: 10px 20px;
+    }
+
+    .bloco-azul input,
+    .bloco-azul select {
+        font-size: 14px;
+    }
+
+    .bloco-azul button {
+        font-size: 16px;
+        padding: 12px;
+    }
+
+    .container-logo {
+        padding: 20px;
+    }
+
+    .logo {
+        width: 120px;
+    }
+}
+
+
+@media (min-width: 0px) and (max-width: 400px) {
+    .container-cadastro {
+        border-radius: 0;
+    }
+
+    .bloco-azul {
+        padding: 16px;
+    }
+
+    .bloco-azul h1 {
+        font-size: 1.2rem;
+        padding: 8px 16px;
+        margin-bottom: 16px;
+    }
+
+    .bloco-azul h2 {
+        font-size: 1.1rem;
+        margin-bottom: 16px;
+    }
+
+    .bloco-azul label {
+        font-size: 13px;
+    }
+
+    .bloco-azul input,
+    .bloco-azul select {
+        font-size: 13px;
+        padding: 10px 12px;
+    }
+
+    .bloco-azul button {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .container-logo {
+        padding: 16px;
+    }
+
+    .logo {
+        width: 90px;
+    }
+}
