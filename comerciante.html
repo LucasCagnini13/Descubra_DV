@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/user-style.css">
+    <link rel="stylesheet" href="styles/comerciante-style.css">
+    <title>Painel Comerciante - DescubraDV</title>
+</head>
+<body>
+
+<header class="navbar">
+    <div class="brand-container">
+        <img src="images/logo.png" alt="logo" class="logo" onerror="this.style.display='none'">
+        <h1 class="brand">Descubra<span>DV</span></h1>
+    </div>
+    <nav>
+        <ul class="menu">
+            <li><a href="#estatisticas">Estatísticas</a></li>
+            <li><a href="#produtos">Produtos</a></li>
+            <li><a href="#trocas">Trocas</a></li>
+            <li><a href="#" data-logout>Sair</a></li>
+            <li class="profile">
+                <div class="profile-info">
+                    <p id="loja-nome">Minha Loja</p>
+                    <p class="comerciante-user" id="comerciante-nome"></p>
+                </div>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+<section class="comerciante-panel">
+
+    <div class="comerciante-header">
+        <h1>Painel do Comerciante</h1>
+        <p>Cadastre prêmios e acompanhe as trocas de pontos dos descobridores.</p>
+    </div>
+
+    <div class="dashboard-cards" id="estatisticas">
+        <div class="card">
+            <h2 id="stat-produtos">0</h2>
+            <p>Produtos cadastrados</p>
+        </div>
+        <div class="card">
+            <h2 id="stat-trocas">0</h2>
+            <p>Trocas realizadas</p>
+        </div>
+        <div class="card">
+            <h2 id="stat-pontos">0</h2>
+            <p>Pontos distribuídos</p>
+        </div>
+    </div>
+
+    <div class="comerciante-content">
+
+        <div class="comerciante-section" id="produtos">
+            <h2>Meus produtos / prêmios</h2>
+            <form id="form-produto" class="form-produto">
+                <input name="nome" type="text" placeholder="Nome do produto" required>
+                <input name="descricao" type="text" placeholder="Descrição" required>
+                <input name="pontos" type="number" placeholder="Pontos necessários" min="1" required>
+                <button type="submit" class="btn-add">+ Adicionar produto</button>
+            </form>
+            <div id="produtos-list" class="comerciante-list"></div>
+        </div>
+
+        <div class="comerciante-section" id="trocas">
+            <h2>Trocas realizadas</h2>
+            <div id="trocas-list" class="comerciante-list"></div>
+        </div>
+
+    </div>
+</section>
+
+<script src="js/data.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/app-comerciante.js"></script>
+</body>
+</html>

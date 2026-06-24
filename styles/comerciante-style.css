@@ -1,0 +1,163 @@
+.comerciante-panel {
+    background-color: var(--principal-clara);
+    min-height: 100vh;
+    padding: 120px 50px 50px;
+}
+
+.comerciante-header {
+    margin-bottom: 40px;
+}
+
+.comerciante-header h1 {
+    font-size: 50px;
+}
+
+.comerciante-header p {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.comerciante-user {
+    font-size: 12px;
+    color: #666;
+}
+
+.comerciante-content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.comerciante-section {
+    background-color: var(--cor-secundaria);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px var(--principal-escura);
+}
+
+.comerciante-section h2 {
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+
+.form-produto {
+    display: grid;
+    grid-template-columns: 1fr 1fr 120px auto;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.form-produto input {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.form-produto .btn-add {
+    white-space: nowrap;
+}
+
+.comerciante-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.comerciante-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    border-radius: 10px;
+    background-color: var(--principal-clara);
+    gap: 16px;
+}
+
+.comerciante-item p {
+    margin-top: 4px;
+    font-size: 14px;
+    color: #555;
+}
+
+.tag-pontos,
+.tag-data {
+    display: inline-block;
+    margin-top: 8px;
+    padding: 4px 10px;
+    background: var(--cor-principal);
+    color: white;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.tag-data {
+    background: var(--principal-escura);
+}
+
+.dashboard-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.dashboard-cards .card {
+    background-color: var(--cor-secundaria);
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px var(--principal-escura);
+}
+
+.dashboard-cards .card h2 {
+    color: var(--cor-principal);
+    font-size: 40px;
+}
+
+.dashboard-cards .card p {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+.btn-add,
+.btn-delete {
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn-add {
+    background-color: var(--cor-principal);
+    color: white;
+}
+
+.btn-delete {
+    background-color: #c62828;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .comerciante-panel {
+        padding: 140px 20px 40px;
+    }
+
+    .comerciante-header h1 {
+        font-size: 32px;
+    }
+
+    .form-produto {
+        grid-template-columns: 1fr;
+    }
+
+    .dashboard-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .comerciante-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

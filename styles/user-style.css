@@ -598,3 +598,257 @@ body {
         margin: 20px auto;
     }
 }
+
+/**********/
+/* CHECK-IN */
+/**********/
+
+.checkin-section {
+    min-height: 60vh;
+    padding: 120px 40px 60px;
+    background-color: var(--principal-clara);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.checkin-block {
+    background: var(--cor-secundaria);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px var(--principal-escura);
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+}
+
+.checkin-block h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.checkin-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+.checkin-form select,
+.checkin-form input {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+.checkin-form button {
+    padding: 14px;
+    background: var(--cor-principal);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.checkin-msg {
+    margin-top: 16px;
+    font-weight: 600;
+}
+
+.checkin-msg.sucesso { color: #2e7d32; }
+.checkin-msg.erro { color: #c62828; }
+
+/************/
+/* HISTÓRICO */
+/************/
+
+.historico-section {
+    padding: 120px 40px 60px;
+    background-color: var(--cor-secundaria);
+}
+
+.historico-block {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.historico-block h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.historico-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.historico-grid h3 {
+    margin-bottom: 16px;
+    color: var(--cor-principal);
+}
+
+.historico-lista {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.historico-item {
+    padding: 12px 16px;
+    border-radius: 8px;
+    background: var(--principal-clara);
+}
+
+.historico-item.visitado {
+    border-left: 4px solid #2e7d32;
+}
+
+.historico-item.nao-visitado {
+    border-left: 4px solid #9e9e9e;
+}
+
+/**********/
+/* LUGARES */
+/**********/
+
+.places {
+    padding: 120px 40px 60px;
+    height: auto;
+}
+
+.places-header h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+.places-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.place-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 5px var(--principal-escura);
+}
+
+.place-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.place-info {
+    padding: 16px;
+}
+
+.place-status {
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.place-card.visitado .place-status { color: #2e7d32; }
+.place-card.nao-visitado .place-status { color: #757575; }
+
+.place-info h3 {
+    margin: 8px 0;
+}
+
+/************/
+/* PRODUTOS */
+/************/
+
+.products {
+    padding: 120px 40px 60px;
+    background-color: var(--principal-clara);
+    min-height: 60vh;
+}
+
+.products-block {
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.products-block h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 30px;
+}
+
+.product-card {
+    background: var(--cor-secundaria);
+    padding: 24px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px var(--principal-escura);
+}
+
+.product-card img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    margin-bottom: 12px;
+}
+
+.product-pontos {
+    color: var(--cor-principal);
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.btn-resgatar {
+    padding: 10px 20px;
+    background: var(--cor-principal);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn-resgatar:disabled {
+    background: #bdbdbd;
+    cursor: not-allowed;
+}
+
+.badge-desbloqueado {
+    border: 2px solid var(--cor-principal);
+}
+
+.xp-fill-badge {
+    height: 100%;
+    background: var(--cor-principal);
+    border-radius: 5px;
+    transition: width 0.3s;
+}
+
+@media (max-width: 768px) {
+    .historico-grid,
+    .places-grid,
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .checkin-section,
+    .historico-section,
+    .places,
+    .products {
+        padding: 100px 20px 40px;
+    }
+}
