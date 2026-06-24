@@ -4,14 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DescubraDV</title>
-  <link rel="stylesheet" href="/styles/login-style.css">
+  <link rel="stylesheet" href="styles/login-style.css">
 </head>
 <body>
 
   <div class="container">
 
     <div class="content">
-      <img src="/images/logo.png" alt="Logo DescubraDV" class="logo">
+      <img src="images/logo.png" alt="Logo DescubraDV" class="logo" onerror="this.style.display='none'">
     </div>
 
     <div class="formulario">
@@ -20,7 +20,7 @@
       <p>Acesse e descubra os selos que contam a história da nossa cidade!</p>
     </div>
 
-    <form>
+    <form id="login-form">
       <div class="campo">
         <label for="usuario">Usuário</label>
         <input type="text" id="usuario" name="usuario" placeholder="Digite seu usuário" required>
@@ -31,14 +31,30 @@
         <input type="password" id="senha" name="senha" placeholder="Digite sua senha" required>
       </div>
 
+      <p id="login-erro" class="login-erro" hidden></p>
+
       <a href="#" class="esqueci">Esqueci minha senha</a>
 
       <button type="submit">Entrar</button>
-<a href="admin-login.html" class="acesso-admin">Acesso administrativo</a>
 
+      <p class="cadastro-link">Não tem conta? <a href="register.html">Cadastre-se</a></p>
+
+      <div class="demo-credenciais">
+        <p><strong>Contas demo para apresentação:</strong></p>
+        <ul>
+          <li>Descobridor: <code>joao</code> / <code>123</code></li>
+          <li>Admin: <code>admin</code> / <code>admin</code></li>
+          <li>Comerciante: <code>maria</code> / <code>123</code></li>
+        </ul>
+      </div>
     </form>
 
   </div>
 
+  <script src="js/data.js"></script>
+  <script src="js/auth.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", initLoginForm);
+  </script>
 </body>
 </html>

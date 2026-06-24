@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DescubraDV - Cadastro</title>
-    <link rel="stylesheet" href="/styles/register-style.css">
+    <link rel="stylesheet" href="styles/register-style.css">
 </head>
 <body>
 
@@ -15,22 +15,22 @@
            <h2>Faça seu cadastro!</h2>
 <p class="descricao">Acesse e descubra os selos que contam a história da nossa cidade!</p>
 
-<form action="salvar.html" method="get">
+<form id="register-form">
     <div class="campo">
         <label>Nome:</label>
-        <input name="Nome" type="text" placeholder="Digite seu nome:">
+        <input name="Nome" type="text" placeholder="Digite seu nome:" required>
     </div>
     <div class="campo">
         <label>Email:</label>
-        <input name="Email" type="email" placeholder="Digite seu email">
+        <input name="Email" type="email" placeholder="Digite seu email" required>
     </div>
     <div class="campo">
         <label>Senha:</label>
-        <input name="Senha" type="password" placeholder="Digite sua senha:">
+        <input name="Senha" type="password" placeholder="Digite sua senha:" required>
     </div>
     <div class="campo">
         <label>Tipo:</label>
-        <select name="Tipo">
+        <select name="Tipo" required>
             <option selected value="">Selecione seu tipo de cadastro</option>
             <option value="1">Descobridor</option>
             <option value="2">Comerciante</option>
@@ -43,10 +43,15 @@
         
 
        <div class="container-logo">
-    <img src="/images/logoB.png" class="logo" alt="Logo">
+    <img src="images/logoB.png" class="logo" alt="Logo" onerror="this.style.display='none'">
 </div>
 
     </div>
 
+    <script src="js/data.js"></script>
+    <script src="js/auth.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", initRegisterForm);
+    </script>
 </body>
 </html>
