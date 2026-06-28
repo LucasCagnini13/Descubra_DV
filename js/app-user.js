@@ -239,16 +239,39 @@ function renderRanking(session) {
 function initSearch() {
   const input = document.getElementById("search-input");
   const btn = document.getElementById("search-btn");
-  if (!input) return;
 
-  const filtrar = () => {
+  if (!input || !btn) return;
+
+  function pesquisar() {
     const termo = input.value.toLowerCase().trim();
-    document.querySelectorAll(".place-card").forEach((card) => {
-      const nome = card.dataset.nome || "";
-      card.style.display = !termo || nome.includes(termo) ? "" : "none";
-    });
-  };
 
-  input.addEventListener("input", filtrar);
-  if (btn) btn.addEventListener("click", filtrar);
+    // Volta todas as imagens ao normal
+    document.querySelectorAll("#places .images img").forEach((img) => {
+      img.style.opacity = "0.4";
+      img.style.transform = "scale(1)";
+      img.style.transition = "0.4s";
+    });
+
+    if (termo === "") return;
+
+    const imagem = [...document.querySelectorAll("#places .images img")]
+      .find((img) => img.alt.toLowerCase().includes(termo));
+
+    if (imagem) {
+      document.getElementById("places").scrollIntoView({
+        behavior: "smooth"
+      });
+
+      imagem.style.opacity = "1";
+      imagem.style.transform = "scale(1.1)";
+    }
+  }
+
+  btn.addEventListener("click", pesquisar);
+
+  input.addEventListener("keydown", (e) => {
+    if (e.key === "Enter") {
+      pesquisar();
+    }
+  });
 }
