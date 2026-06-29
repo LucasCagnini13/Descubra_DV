@@ -132,7 +132,7 @@ body {
     align-items:center;
     justify-content: center;
     height: 100vh;
-    background: url('/images/cidade.jpg');
+    background: url('../images/cidade.jpg') no-repeat center center;
     background-size: cover;
     background-color: rgba(0, 0, 0, 0.5);
     background-blend-mode: darken;
